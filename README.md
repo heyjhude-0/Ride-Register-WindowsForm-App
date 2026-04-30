@@ -1,6 +1,5 @@
 # Ride&Register 
 
-
 ## Project Description and Purpose
 
 Ride&Register is a C# Windows Form Application  designed to manage Tricycle Operators and Drivers' Association (TODA) systems. It streamlined the operation of a TODA system when it comes to member profiling, and managing tricycles, franchises and routes. It incorporates features such as member’s membership and tracking, vehicle registration, and route assignment.
@@ -28,5 +27,4 @@ List the main features of your system.
 
 
 ## Names of the developers or team members
-**Dagle, Jhude Dominic**
-**Hernandez, Nhealeen Fae D.**
+

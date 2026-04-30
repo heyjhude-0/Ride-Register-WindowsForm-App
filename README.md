@@ -28,5 +28,5 @@ List the main features of your system.
 
 
 ## Names of the developers or team members
-**Dagle, Jhude Dominic 
-Hernandez, Nhealeen Fae D.**
+**Dagle, Jhude Dominic**
+**Hernandez, Nhealeen Fae D.**

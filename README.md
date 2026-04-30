@@ -15,12 +15,12 @@ List the main features of your system.
 | Login Functionality | Securing access through a login authentication, ensuring only the admin can access TODA information, protecting member data. |
 | Dashboard Overview | An overview of the TODA system including total number of members, registered tricycles, and memberships supervision. |
 | Member Management | Register new members
-Update member information
-Track membership status |
+                      Update member information
+                      Track membership status |
 | Tricycle Management | Add tricycle information
-Link tricycle to available specific members |
+                        Link tricycle to available specific members |
 | Route Management | Define route start point and end point 
-Link route to tricycle |
+                     Link route to tricycle |
 
 Explanation of how the program works
 Instructions on how to run the application

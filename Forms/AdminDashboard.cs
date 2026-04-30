@@ -82,10 +82,7 @@ namespace Ride_Register.Forms
 
         }
 
-        private void btnRoutes_Click(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         Form activeForm = null;
 
@@ -113,6 +110,15 @@ namespace Ride_Register.Forms
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             OpenChildForm(new AdminDashboardForm());
+        }
+
+        private void btnTricycles_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new TricycleForm());
+        }
+        private void btnRoutes_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new RouteForm());
         }
     }
 }

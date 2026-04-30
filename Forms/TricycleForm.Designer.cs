@@ -1,6 +1,6 @@
 ﻿namespace Ride_Register.Forms
 {
-    partial class MembersForm
+    partial class TricycleForm
     {
         /// <summary>
         /// Required designer variable.
@@ -36,20 +36,20 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(334, 250);
+            this.label1.Location = new System.Drawing.Point(351, 272);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 64);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MEMBERS";
+            this.label1.Size = new System.Drawing.Size(348, 64);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "TRICYCLES";
             // 
-            // MembersForm
+            // TricycleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1018, 608);
             this.Controls.Add(this.label1);
-            this.Name = "MembersForm";
-            this.Text = "MembersForm";
+            this.Name = "TricycleForm";
+            this.Text = "TricyclesForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

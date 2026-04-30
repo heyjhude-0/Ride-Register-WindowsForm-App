@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Ride_Register.Forms
 {
-    public partial class MembersForm : Form
+    public partial class TricycleForm : Form
     {
-        public MembersForm()
+        public TricycleForm()
         {
             InitializeComponent();
         }
-
-        
     }
 }

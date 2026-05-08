@@ -193,13 +193,13 @@
             this.passBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.passBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passBox.CausesValidation = false;
-            this.passBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.passBox.ForeColor = System.Drawing.Color.Black;
-            this.passBox.Location = new System.Drawing.Point(3, 23);
+            this.passBox.Location = new System.Drawing.Point(3, 26);
             this.passBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.passBox.Name = "passBox";
             this.passBox.PasswordChar = '*';
-            this.passBox.Size = new System.Drawing.Size(386, 27);
+            this.passBox.Size = new System.Drawing.Size(386, 24);
             this.passBox.TabIndex = 2;
             this.passBox.Text = "password";
             this.passBox.Click += new System.EventHandler(this.textBox2_Click);
@@ -208,7 +208,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(98, 264);
+            this.pictureBox3.Location = new System.Drawing.Point(98, 262);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(41, 47);
@@ -222,7 +222,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(24)))), ((int)(((byte)(157)))));
-            this.label5.Location = new System.Drawing.Point(144, 273);
+            this.label5.Location = new System.Drawing.Point(144, 271);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 30);
             this.label5.TabIndex = 4;
@@ -285,12 +285,12 @@
             // 
             this.userBox.BackColor = System.Drawing.Color.WhiteSmoke;
             this.userBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.userBox.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.userBox.ForeColor = System.Drawing.Color.Black;
-            this.userBox.Location = new System.Drawing.Point(6, 28);
+            this.userBox.Location = new System.Drawing.Point(3, 29);
             this.userBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.userBox.Name = "userBox";
-            this.userBox.Size = new System.Drawing.Size(383, 27);
+            this.userBox.Size = new System.Drawing.Size(383, 24);
             this.userBox.TabIndex = 2;
             this.userBox.Tag = "";
             this.userBox.Text = "Enter username";

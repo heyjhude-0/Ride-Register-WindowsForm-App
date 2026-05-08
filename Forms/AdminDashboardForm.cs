@@ -16,5 +16,25 @@ namespace Ride_Register.Forms
         {
             InitializeComponent();
         }
+
+        private void lblGreeting1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblGreeting2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblToda_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -149,9 +149,9 @@ namespace Ride_Register
                         {
                             new AdminDashboard().Show();
                         }
-                        else
+                        else if (role == "Member")
                         {
-                            //
+                            new UserTestForm().Show();
                         }
 
                         this.Hide();

@@ -17,7 +17,7 @@ namespace Ride_Register
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new AdminDashboard());
         }
     }
 }

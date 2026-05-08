@@ -17,9 +17,16 @@ namespace Ride_Register.Forms
             InitializeComponent();
             
         }
+
+        AdminDashboardForm adminDashboard = new AdminDashboardForm();
+        MembersForm members = new MembersForm();
+        TricycleForm tricycle = new TricycleForm();
+        RouteForm route = new RouteForm();
+
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
-            OpenChildForm(new AdminDashboardForm());
+            OpenChildForm(adminDashboard);
+
         }
 
         private void SideMenu_Paint(object sender, PaintEventArgs e)
@@ -86,39 +93,72 @@ namespace Ride_Register.Forms
 
         Form activeForm = null;
 
+        //private void OpenChildForm(Form childForm)
+        //{
+        //    if (activeForm != null)
+        //        activeForm.Close();
+        //    activeForm = childForm;
+        //    childForm.TopLevel = false;
+        //    childForm.FormBorderStyle = FormBorderStyle.None;
+        //    childForm.Dock = DockStyle.Fill;
+
+        //    pnlChildForm.Controls.Clear();
+        //    pnlChildForm.Controls.Add(childForm);
+        //    childForm.Show();
+        //}
+
+
         private void OpenChildForm(Form childForm)
         {
-            if (activeForm != null)
-                activeForm.Close();
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
+            foreach (Control ctrl in pnlChildForm.Controls)
+                ctrl.Visible = false;
 
-            pnlChildForm.Controls.Clear();
-            pnlChildForm.Controls.Add(childForm);
-            childForm.Show();
+            if (!pnlChildForm.Controls.Contains(childForm))
+            {
+                childForm.TopLevel = false;
+                childForm.FormBorderStyle = FormBorderStyle.None;
+                childForm.Dock = DockStyle.Fill;
+                pnlChildForm.Controls.Add(childForm);
+                childForm.Show();
+            }
+            else
+            {
+                childForm.Visible = true;
+                childForm.BringToFront();
+            }
+
+            activeForm = childForm;
         }
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
             //btnMembers.FillColor = Color.WhiteSmoke;
             //btnMembers.ForeColor = Color.Blue;
-            OpenChildForm(new MembersForm());
+            OpenChildForm(members);
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new AdminDashboardForm());
+            OpenChildForm(adminDashboard);
         }
 
         private void btnTricycles_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new TricycleForm());
+            OpenChildForm(tricycle);
         }
         private void btnRoutes_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new RouteForm());
+            OpenChildForm(route);
+        }
+
+        private void pnlChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

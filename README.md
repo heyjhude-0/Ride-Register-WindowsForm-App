@@ -158,7 +158,13 @@ You can now test:
 - **System.Data.SqlClient** - SQL Server connectivity
 - **System.Windows.Forms** - WinForms framework
 - 
-## Names of the developers or team members
-- Dagle, Jhude Dominic
-- Hernandez, Nhealeen Fae
-- Tarcelo, Mark Nino
+## **Team Members**
+
+| Name | Role | Responsibilities |
+|------|------|------------------|
+| Dagle, Jhude Dominic | Lead Developer | Project architecture, authentication, core features |
+| Hernandez, Nhealeen Fae | Frontend Developer | UI Design, navigations |
+| Tarcelo, Mark Nino | Developer |  |
+
+
+**Happy Coding! 🚀**

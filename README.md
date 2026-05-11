@@ -3,14 +3,13 @@
 
 ## Project Description and Purpose
 
-Ride&Register is a C# Windows Form Application  designed to manage Tricycle Operators and Drivers' Association (TODA) systems. It streamlined the operation of a TODA system when it comes to member profiling, and managing tricycles, franchises and routes. It incorporates features such as member’s membership and tracking, vehicle registration, and route assignment.
-The proposed project will be beneficial to real life TODA of tricycle drivers. This addresses the problem of the lack of management and access of TODAs on their organization operations. Through CRUD functionality, the administrator can oversee TODA processes and systems, including faster retrieval and modification of member information, monitoring active or expired memberships, checking tricycle availability for driver linking, and reviewing routes lacking assigned tricycles for transportation efficiency. The proposed system helps in ensuring a comprehensive and cohesive management on tricycle association through a windows form application. 
+Ride&Register is a C# Windows Form Application  designed to manage Tricycle Operators and Drivers' Association (TODA) systems. It streamlined the operation of a TODA system when it comes to member profiling, and managing tricycles, franchises and routes. It incorporates features such as member’s membership and tracking, vehicle registration, and route assignment. The proposed project will be beneficial to real life TODA of tricycle drivers. This addresses the problem of the lack of management and access of TODAs on their organization operations. Through CRUD functionality, the administrator can oversee TODA processes and systems, including faster retrieval and modification of member information, monitoring active or expired memberships, checking tricycle availability for driver linking, and reviewing routes lacking assigned tricycles for transportation efficiency. The proposed system helps in ensuring a comprehensive and cohesive management on tricycle association through a windows form application. 
 
 ---
 
 ## UML Diagram
 
-![UML Diagram](uml.png)
+![UML Diagram](UML.drawio.png)
 
 ---
 
@@ -40,7 +39,7 @@ The Dashboard offers a snapshot of the TODA system which includes:
 
   The admin can click on any of the following tabs or buttons to get to the three main modules from the dashboard:
 
-**1. Member Management**
+  **1. Member Management**
 
   This module lets the admin:
   - Recruit new TODA members
@@ -50,7 +49,7 @@ The Dashboard offers a snapshot of the TODA system which includes:
 
   All member information is in the database tables Members and Memberships.
 
-**2. Tricycle Management**
+  **2. Tricycle Management**
 
   The admin can use this module to:
   - Record the information about the tricycle (model, plate number).
@@ -59,7 +58,7 @@ The Dashboard offers a snapshot of the TODA system which includes:
 
   This will ensure each tricycle has an owner/driver assigned.
 
-**3. Route Management**
+  **3. Route Management**
 
   With this module, the admin can:
   - Identify starting and end points for routes

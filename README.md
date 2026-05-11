@@ -93,6 +93,7 @@ The Dashboard offers a snapshot of the TODA system which includes:
 - Once you have successfully logged in, the Dashboard will appear.
 
 **Step 4 - Test the Functionalities**
+
 You can now test:
 - Adding and editing members.
 - Registration of tricycles and connecting to members

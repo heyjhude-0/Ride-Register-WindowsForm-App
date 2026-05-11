@@ -9,7 +9,7 @@ Ride&Register is a C# Windows Form Application  designed to manage Tricycle Oper
 
 ## UML Diagram
 
-<pre> ```mermaid classDiagram class Node { +int x +int y +float gCost +float hCost +float fCost } class AStar { +findPath(start, end) -calculateHeuristic() -getNeighbors() } AStar --> Node ``` </pre>
+
 
 ---
 

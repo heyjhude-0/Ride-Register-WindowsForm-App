@@ -1,14 +1,16 @@
 # Ride&Register 
-
+---
 ## Project Description and Purpose
 
 Ride&Register is a C# Windows Form Application  designed to manage Tricycle Operators and Drivers' Association (TODA) systems. It streamlined the operation of a TODA system when it comes to member profiling, and managing tricycles, franchises and routes. It incorporates features such as member’s membership and tracking, vehicle registration, and route assignment.
 The proposed project will be beneficial to real life TODA of tricycle drivers. This addresses the problem of the lack of management and access of TODAs on their organization operations. Through CRUD functionality, the administrator can oversee TODA processes and systems, including faster retrieval and modification of member information, monitoring active or expired memberships, checking tricycle availability for driver linking, and reviewing routes lacking assigned tricycles for transportation efficiency. The proposed system helps in ensuring a comprehensive and cohesive management on tricycle association through a windows form application. 
+---
 
 ## UML Diagram
 
 ![UML Diagram](uml.png)
 
+---
 ## Features and Functionalities of the System
 
 List the main features of your system.
@@ -19,7 +21,7 @@ List the main features of your system.
 | Member Management | Register new members, update member information, track membership status |
 | Tricycle Management | Add tricycle information, link tricycle to available specific members |
 | Route Management | Define route start point and end point, link route to tricycle |
-
+---
 ## Explanation of how the program works
 
 Ride&Register is a C# Windows Forms application for a Tricycle Operators and Drivers' Association (TODA) that manages the operation of a TODA. Member profiling, registration of tricycles and route assignment are all consolidated on a single organized desktop application for the TODA administrator.
@@ -60,7 +62,7 @@ The Dashboard offers a snapshot of the TODA system which includes:
   - View the assignment and availability of routes
 
   This assists the TODA to track what routes are given a tricycle and which ones are still being driven.
-
+---
 ## Instructions on how to run the application
 
 **Step 1 – Set Up the Database**
@@ -90,8 +92,8 @@ You can now test:
 - Registration of tricycles and connecting to members
 - Making routes and assigning tricycles
 - Viewing records in DataGridViews with search and filter
-
+---
 ## Names of the developers or team members
 - Dagle, Jhude Dominic
 - Hernandez, Nhealeen Fae D.
-
+---

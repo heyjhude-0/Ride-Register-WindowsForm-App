@@ -446,6 +446,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.pnlLogin.ResumeLayout(false);
             this.pnlLogin.PerformLayout();
             this.panel4.ResumeLayout(false);

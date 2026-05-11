@@ -101,9 +101,9 @@ namespace Ride_Register.Services
 
         public void DeleteRoute(int routeID)
         {
-            DatabaseConnection db2 = new DatabaseConnection();
+            DatabaseConnection db = new DatabaseConnection();
 
-            using (SqlConnection conn = db2.GetConnection())
+            using (SqlConnection conn = db.GetConnection())
             {
                 conn.Open();
 

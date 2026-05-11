@@ -132,11 +132,9 @@ namespace Ride_Register
                 {
                     conn.Open();
 
-                    string query =
-                            @"SELECT UserID, Role
-                              FROM Users
-                              WHERE Username = @username
-                              AND Password = @password";
+                    string query =@"SELECT UserID, Role FROM Users
+                                    WHERE Username = @username
+                                    AND Password = @password";
 
                     SqlCommand cmd =
                         new SqlCommand(query, conn);
@@ -152,12 +150,9 @@ namespace Ride_Register
 
                     if (reader.Read())
                     {
-                        int userID =
-                            Convert.ToInt32(
-                                reader["UserID"]);
+                        int userID = Convert.ToInt32(reader["UserID"]);
 
-                        string role =
-                            reader["Role"].ToString();
+                        string role = reader["Role"].ToString();
 
                         SessionManager.CurrentUserID = userID;
                         SessionManager.CurrentUsername = username;
@@ -243,6 +238,11 @@ namespace Ride_Register
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }

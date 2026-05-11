@@ -42,80 +42,36 @@ namespace Ride_Register.Forms
         }
         private void LoadDashboardInfo()
         {
-            UserDashboardService service =
-                new UserDashboardService();
+            UserDashboardService service = new UserDashboardService();
 
-            // Load user profile data
-            DataTable table =
-                service.GetUserDashboardData(
-                    loggedUserID);
+            DataTable table = service.GetUserDashboardData(loggedUserID);
 
             if (table.Rows.Count > 0)
             {
-                DataRow row =
-                    table.Rows[0];
+                DataRow row = table.Rows[0];
 
                 lblGreeting.Text = row["FirstName"].ToString();
-                lblMemberID.Text =
-                    row["MemberID"]
-                    .ToString();
+                lblMemberID.Text = row["MemberID"].ToString();
 
-                lblFullName.Text =
-                    row["FirstName"] +
-                    " " +
-                    row["LastName"];
+                lblFullName.Text = row["FirstName"] + " " + row["LastName"];
 
-                lblDateOfBirth.Text =
-                    Convert.ToDateTime(
-                        row["DateOfBirth"])
-                    .ToString("MMM dd, yyyy");
+                lblDateOfBirth.Text = Convert.ToDateTime(row["DateOfBirth"]).ToString("MMM dd, yyyy");
 
-                lblPhone.Text =
-                    row["PhoneNumber"]
-                    .ToString();
+                lblPhone.Text = row["PhoneNumber"].ToString();
 
-                lblAddress.Text =
-                    row["Address"]
-                    .ToString();
+                lblAddress.Text = row["Address"].ToString();
 
-                // MEMBERSHIP PANEL
-                lblMembershipID.Text =
-                    row["MembershipID"]
-                    .ToString();
+                lblMembershipID.Text = row["MembershipID"].ToString();
 
-                lblMembershipRole.Text =
-                    row["MembershipRole"]
-                    .ToString();
+                lblMembershipRole.Text = row["MembershipRole"].ToString();
 
-                lblStartDate.Text =
-                    Convert.ToDateTime(
-                        row["StartDate"])
-                    .ToString("MMM dd, yyyy");
+                lblStartDate.Text = Convert.ToDateTime(row["StartDate"]).ToString("MMM dd, yyyy");
 
-                lblExpiryDate.Text =
-                    Convert.ToDateTime(
-                        row["ExpiryDate"])
-                    .ToString("MMM dd, yyyy");
+                lblExpiryDate.Text = Convert.ToDateTime(row["ExpiryDate"]).ToString("MMM dd, yyyy");
 
-                lblStatus.Text =
-                    row["MembershipStatus"]
-                    .ToString();
-
-                //// ACCOUNT PANEL
-                //lblUserID.Text =
-                //    row["UserID"]
-                //    .ToString();
-
-                //lblUsername.Text =
-                //    row["Username"]
-                //    .ToString();
-
-                //lblAccountRole.Text =
-                //    row["AccountRole"]
-                //    .ToString();
+                lblStatus.Text = row["MembershipStatus"].ToString();
             }
 
-            // Load tricycle data
             DataTable tricycleTable =
                 service.GetUserTricycleData(
                     loggedUserID);
@@ -144,7 +100,6 @@ namespace Ride_Register.Forms
                 lblModel.Text = "N/A";
             }
 
-            // Load route data
             DataTable routeTable =
                 service.GetUserRouteData(
                     loggedUserID);

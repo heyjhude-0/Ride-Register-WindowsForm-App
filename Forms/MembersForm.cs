@@ -28,9 +28,7 @@ namespace Ride_Register.Forms
 
         private void MembersForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'rideRegister_DBDataSet1.Members' table. You can move, or remove it, as needed.
             this.membersTableAdapter.Fill(this.rideRegister_DBDataSet1.Members);
-            // TODO: This line of code loads data into the 'rideRegister_DBDataSet.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.rideRegister_DBDataSet.Users);
 
             LoadMembers();
@@ -138,8 +136,6 @@ namespace Ride_Register.Forms
             dgvMembers.Columns["MembershipID"].Visible = false;
             dgvMembers.Columns["StartDate"].Visible = false;
 
-
-            // Make sure AccountStatus column is visible
             if (dgvMembers.Columns.Contains("AccountStatus"))
             {
                 dgvMembers.Columns["AccountStatus"].Visible = true;
@@ -207,7 +203,6 @@ namespace Ride_Register.Forms
                 }
             }
 
-            // Add Role filter
             if (!string.IsNullOrWhiteSpace(roleFilter) && roleFilter != "All")
             {
                 string roleCondition = $"Role = '{roleFilter}'";
@@ -216,7 +211,6 @@ namespace Ride_Register.Forms
                     : $"{filterExpression} AND {roleCondition}";
             }
 
-            // Add Status filter
             if (!string.IsNullOrWhiteSpace(statusFilter) && statusFilter != "All")
             {
                 string statusCondition = $"Status = '{statusFilter}'";
@@ -225,7 +219,6 @@ namespace Ride_Register.Forms
                     : $"{filterExpression} AND {statusCondition}";
             }
 
-            // Add Account filter
             if (!string.IsNullOrWhiteSpace(accountFilter) && accountFilter != "All")
             {
                 string accountCondition = $"AccountStatus = '{accountFilter}'";
@@ -275,11 +268,6 @@ namespace Ride_Register.Forms
             ApplyFilter();
         }
 
-        //private void cmbRoleFilter_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    ApplyFilter();
-        //}
-
         private void cmbStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
             ApplyFilter();
@@ -309,7 +297,6 @@ namespace Ride_Register.Forms
                 dateStartDate.Value = Convert.ToDateTime(row.Cells["StartDate"].Value);
                 dateEndDate.Value = Convert.ToDateTime(row.Cells["ExpiryDate"].Value);
 
-                // Enable/disable Create Account button based on account status
                 string accountStatus = row.Cells["AccountStatus"].Value.ToString();
                 btnCreateAccount.Enabled = (accountStatus == "No Account");
 
@@ -733,13 +720,6 @@ namespace Ride_Register.Forms
 
         }
 
-        //{
 
-        //}
-
-        //private void txtSearch_TextChanged_1(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }

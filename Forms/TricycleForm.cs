@@ -90,7 +90,6 @@ namespace Ride_Register.Forms
             cmbRoute.DisplayMember = "RouteName";
             cmbRoute.ValueMember = "RouteID";
 
-            // Populate filter combo boxes
             PopulateFilterComboBoxes();
         }
 
@@ -99,7 +98,6 @@ namespace Ride_Register.Forms
             MembersService service = new MembersService();
             RouteService routeService = new RouteService();
 
-            // Owner Filter
             DataTable owners = service.GetAllMembersForCmb();
             DataRow allOwnersRow = owners.NewRow();
             allOwnersRow["MemberID"] = DBNull.Value;
@@ -110,7 +108,6 @@ namespace Ride_Register.Forms
             cmbOwnerFilter.ValueMember = "MemberID";
             cmbOwnerFilter.SelectedIndex = 0;
 
-            // Driver Filter
             DataTable drivers = service.GetDriversForCmb();
             DataRow allDriversRow = drivers.NewRow();
             allDriversRow["MemberID"] = DBNull.Value;
@@ -121,7 +118,6 @@ namespace Ride_Register.Forms
             cmbDriverFilter.ValueMember = "MemberID";
             cmbDriverFilter.SelectedIndex = 0;
 
-            // Route Filter
             DataTable routes = routeService.GetRoutesforCmb();
             DataRow allRoutesRow = routes.NewRow();
             allRoutesRow["RouteID"] = DBNull.Value;
@@ -167,7 +163,6 @@ namespace Ride_Register.Forms
 
             dgvTricycles.DataSource = null;
             dgvTricycles.DataSource = _allTricycles;
-            //dgvTricycles.Columns["TricycleID"].Visible = false;
             dgvTricycles.Columns["OwnerMemberID"].Visible = false;
             dgvTricycles.Columns["DriverMemberID"].Visible = false;
             dgvTricycles.Columns["RouteID"].Visible = false;
@@ -187,14 +182,12 @@ namespace Ride_Register.Forms
 
             DataTable filteredTable = _allTricycles.Copy();
 
-            // Filter by plate number
             if (!string.IsNullOrWhiteSpace(txtSearch.Text))
             {
                 filteredTable.DefaultView.RowFilter = $"Plate_Number LIKE '%{txtSearch.Text}%'";
                 filteredTable = filteredTable.DefaultView.ToTable();
             }
 
-            // Filter by owner
             if (cmbOwnerFilter.SelectedValue != null && cmbOwnerFilter.SelectedValue != DBNull.Value)
             {
                 int ownerID = Convert.ToInt32(cmbOwnerFilter.SelectedValue);
@@ -203,7 +196,7 @@ namespace Ride_Register.Forms
                 filteredTable = ownerFiltered.DefaultView.ToTable();
             }
 
-            // Filter by driver
+
             if (cmbDriverFilter.SelectedValue != null && cmbDriverFilter.SelectedValue != DBNull.Value)
             {
                 int driverID = Convert.ToInt32(cmbDriverFilter.SelectedValue);
@@ -212,7 +205,7 @@ namespace Ride_Register.Forms
                 filteredTable = driverFiltered.DefaultView.ToTable();
             }
 
-            // Filter by route
+
             if (cmbRouteFilter.SelectedValue != null && cmbRouteFilter.SelectedValue != DBNull.Value)
             {
                 int routeID = Convert.ToInt32(cmbRouteFilter.SelectedValue);
@@ -221,7 +214,6 @@ namespace Ride_Register.Forms
                 filteredTable = routeFiltered.DefaultView.ToTable();
             }
 
-            // Update grid
             dgvTricycles.DataSource = null;
             dgvTricycles.DataSource = filteredTable;
             dgvTricycles.Columns["OwnerMemberID"].Visible = false;

@@ -81,33 +81,16 @@ namespace Ride_Register.Forms
                 DataRow row =
                     table.Rows[0];
 
-                lblTotalMembers.Text =
-                    row["TotalMembers"]
-                    .ToString();
+                lblTotalMembers.Text = row["TotalMembers"].ToString();
 
-                lblActive.Text =
-                    row["ActiveMembers"]
-                    .ToString();
+                lblActive.Text = row["ActiveMembers"].ToString();
+                lblTotalTric.Text = row["TotalTricycles"].ToString();
 
-                //lblExpiredMembers.Text =
-                //    row["ExpiredMembers"]
-                //    .ToString();
+                lblWithDriver.Text = row["WithDriver"].ToString();
 
-                lblTotalTric.Text =
-                    row["TotalTricycles"]
-                    .ToString();
+                lblWithoutDriver.Text =row["WithoutDriver"].ToString();
 
-                lblWithDriver.Text =
-                    row["WithDriver"]
-                    .ToString();
-
-                lblWithoutDriver.Text =
-                    row["WithoutDriver"]
-                    .ToString();
-
-                lblTotalRoute.Text =
-                    row["TotalRoutes"]
-                    .ToString();
+                lblTotalRoute.Text = row["TotalRoutes"].ToString();
 
                 lblWithRoute.Text = row["WithRoute"].ToString();
                 lblWithoutRoute.Text = row["WithoutRoute"].ToString();
@@ -170,30 +153,15 @@ namespace Ride_Register.Forms
 
             dgvExpiringMemberships.DataSource =
                 service.GetExpiringMemberships();
-            dgvExpiringMemberships.Columns[
-    "MemberID"
-].HeaderText = "ID";
+            dgvExpiringMemberships.Columns["MemberID"].HeaderText = "ID";
 
-            dgvExpiringMemberships.Columns[
-                "FullName"
-            ].HeaderText = "Member Name";
+            dgvExpiringMemberships.Columns["FullName"].HeaderText = "Member Name";
 
-            dgvExpiringMemberships.Columns[
-                "Role"
-            ].HeaderText = "Role";
+            dgvExpiringMemberships.Columns["Role"].HeaderText = "Role";
 
-            dgvExpiringMemberships.Columns[
-                "ExpiryDate"
-            ].HeaderText = "Expiry";
-
-            dgvExpiringMemberships.Columns[
-                "DaysRemaining"
-            ].HeaderText =
-                "Days Left";
-            dgvExpiringMemberships
-    .Columns["ExpiryDate"]
-    .DefaultCellStyle.Format =
-        "MMM dd, yyyy";
+            dgvExpiringMemberships.Columns["ExpiryDate"].HeaderText = "Expiry";
+            dgvExpiringMemberships.Columns["DaysRemaining"].HeaderText ="Days Left";
+            dgvExpiringMemberships.Columns["ExpiryDate"].DefaultCellStyle.Format ="MMM dd, yyyy";
         }
 
         private void AdminDashboardForm_Activated(object sender, EventArgs e)

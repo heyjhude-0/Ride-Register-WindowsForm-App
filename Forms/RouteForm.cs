@@ -69,14 +69,11 @@ namespace Ride_Register.Forms
 
             card.Width = 250;
             card.Height = 160;
-            //card.BorderStyle = BorderStyle.Solid;
-            //card.BorderThickness = 1;
             card.FillColor = panelColor;
             card.BorderRadius = 10;
             card.Margin = new Padding(10);
             card.Cursor = Cursors.Hand;
 
-            // ROUTE NAME
             Label lblRouteName = new Label();
             lblRouteName.Text = routeName;
             lblRouteName.Font = new Font("Segoe UI", 12, FontStyle.Bold);
@@ -85,14 +82,12 @@ namespace Ride_Register.Forms
             lblRouteName.ForeColor = fontColor;
             lblRouteName.BackColor = panelColor;
 
-            // START POINT
             Label lblStart = new Label();
             lblStart.Text = "•Start: " + startPoint;
             lblStart.Location = new Point(20, 45);
             lblStart.AutoSize = true;
             lblStart.ForeColor = fontColor;
             lblStart.BackColor = panelColor;
-            // END POINT
             Label lblEnd = new Label();
             lblEnd.Text = "•End: " + endPoint;
             lblEnd.Location = new Point(20, 70);
@@ -100,7 +95,6 @@ namespace Ride_Register.Forms
             lblEnd.ForeColor = fontColor;
             lblEnd.BackColor = panelColor;
 
-            // FARE
             Label lblFare = new Label();
             lblFare.Text = "•Fare: ₱" + fare.ToString("0.00");
             lblFare.Location = new Point(20, 95);
@@ -114,14 +108,14 @@ namespace Ride_Register.Forms
             lblTricycleCount.AutoSize = true;
             lblTricycleCount.ForeColor = fontColor;
             lblTricycleCount.BackColor = panelColor;
-            // ADD CONTROLS TO PANEL
+
             card.Controls.Add(lblRouteName);
             card.Controls.Add(lblStart);
             card.Controls.Add(lblEnd);
             card.Controls.Add(lblFare);
             card.Controls.Add(lblTricycleCount);
 
-            // CLICK EVENT
+
             card.Click += (s, e) =>
             {
                 txtRouteName.Text = routeName;
@@ -132,7 +126,6 @@ namespace Ride_Register.Forms
 
                 selectedRouteID = routeID;
 
-                // EDIT MODE
                 btnSave.Enabled = false;
                 btnUpdate.Enabled = true;
                 btnDelete.Enabled = true;

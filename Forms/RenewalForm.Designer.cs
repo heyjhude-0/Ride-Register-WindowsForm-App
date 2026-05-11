@@ -18,7 +18,6 @@ namespace Ride_Register.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RenewalForm));
             this.pnlMain = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblCurrentExpiryLabel = new System.Windows.Forms.Label();
             this.lblCurrentExpiryDate = new System.Windows.Forms.Label();
@@ -32,6 +31,7 @@ namespace Ride_Register.Forms
             this.btnCancel = new System.Windows.Forms.Button();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.SideMenuLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.pnlMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -69,21 +69,6 @@ namespace Ride_Register.Forms
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 92F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(690, 400);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(51, 9);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(276, 38);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Renew Membership";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -287,6 +272,21 @@ namespace Ride_Register.Forms
             this.SideMenuLogo.TabIndex = 2;
             this.SideMenuLogo.TabStop = false;
             this.SideMenuLogo.UseTransparentBackground = true;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(51, 9);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(276, 38);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Renew Membership";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // RenewalForm
             // 

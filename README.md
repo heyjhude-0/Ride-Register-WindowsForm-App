@@ -45,7 +45,7 @@ The Dashboard offers a snapshot of the TODA system which includes:
    - Recruit new TODA members
    - Update member details (Name, Age, Gender, Birthdate, Role)
    - Keep track on membership status (active/expired)
-   - Search and filter member records using the DataGrid View
+   - Search and filter member records using the DataGridView
 
   All member information is in the database tables Members and Memberships.
 
@@ -54,7 +54,7 @@ The Dashboard offers a snapshot of the TODA system which includes:
   The admin can use this module to:
    - Record the information about the tricycle (model, plate number).
    - Attach a tricycle to a particular member/driver
-   - Display list of all Registered tricycles in a DataGrid View
+   - Display list of all Registered tricycles in a DataGridView
 
   This will ensure each tricycle has an owner/driver assigned.
 
@@ -76,6 +76,7 @@ The Dashboard offers a snapshot of the TODA system which includes:
 - You need to make a new database (such as RideRegisterDB).
 - Run the provided SQL script from the project repository to create the tables:
   - Members
+  - Memberships
   - Tricycles
   - Routes
   - Admin/Login table
@@ -105,5 +106,3 @@ You can now test:
 ## Names of the developers or team members
 - Dagle, Jhude Dominic
 - Hernandez, Nhealeen Fae D.
-
----

@@ -7,7 +7,7 @@ The proposed project will be beneficial to real life TODA of tricycle drivers. T
 
 ## UML Diagram
 
-![alt text]([image.jpg](https://drive.google.com/file/d/1Jrc-RB9htXs73AAUoWxbhAIQEgRon9Py/view?usp=sharing))
+![UML Diagram](uml.png)
 
 ## Features and Functionalities of the System
 
@@ -27,41 +27,71 @@ Ride&Register is a C# Windows Forms application for a Tricycle Operators and Dri
 System login is secured with a Login Form as the starting point to the application. Only the admin can login with valid logins in the database. Once logged in, user is forwarded to the Main Dashboard.
 
 The Dashboard offers a snapshot of the TODA system which includes:
-- The total count of members that have registered.The total number of registered members.
-- Total registered tricycles
-- Membership monitoring
+  - The total count of members that have registered.The total number of registered members.
+  - Total registered tricycles
+  - Membership monitoring
 
   The admin can click on any of the following tabs or buttons to get to the three main modules from the dashboard:
 
-1. Member Management
+**1. Member Management**
 
   This module lets the admin:
-- Recruit new TODA members
-- Update member details (Name, Age, Gender, Birthdate, Role)
-- Keep track on membership status (active/expired)
-- Search and filter member records using the DataGrid View
+  - Recruit new TODA members
+  - Update member details (Name, Age, Gender, Birthdate, Role)
+  - Keep track on membership status (active/expired)
+  - Search and filter member records using the DataGrid View
 
   All member information is in the database tables Members and Memberships.
 
-2. Tricycle Management
+**2. Tricycle Management**
 
   The admin can use this module to:
-- Record the information about the tricycle (model, plate number).
-- Attach a tricycle to a particular member/driver
-- Display list of all Registered tricycles in a DataGrid View
+  - Record the information about the tricycle (model, plate number).
+  - Attach a tricycle to a particular member/driver
+  - Display list of all Registered tricycles in a DataGrid View
 
   This will ensure each tricycle has an owner/driver assigned.
 
-3. Route Management
+**3. Route Management**
 
-With this module, the admin can:
-- Identify starting and end points for routes
-- Use tricycles for routes
-- View the assignment and availability of routes
+  With this module, the admin can:
+  - Identify starting and end points for routes
+  - Use tricycles for routes
+  - View the assignment and availability of routes
 
   This assists the TODA to track what routes are given a tricycle and which ones are still being driven.
 
 ## Instructions on how to run the application
 
+**Step 1 – Set Up the Database**
+- Start SQL Server Management Studio.
+- You need to make a new database (such as RideRegisterDB).
+- Run the provided SQL script from the project repository to create the tables:
+  - Members
+  - Tricycles
+  - Routes
+  - Admin/Login table
+
+**Step 2 – Open the Project**
+- Create a new project.
+- Start Microsoft Visual Studio.
+- Select “Open a project or solution.”
+- Click on the Ride&Register project folder or .slnx file.
+
+**Step 3 – Run the Program**
+- Press Start or F5 in the Visual Studio.
+- The Login Form will be displayed.
+- Type in the admin username and password found in the database.
+- Once you have successfully logged in, the Dashboard will appear.
+
+**Step 4 - Test the Functionalities**
+You can now test:
+- Adding and editing members.
+- Registration of tricycles and connecting to members
+- Making routes and assigning tricycles
+- Viewing records in DataGridViews with search and filter
+
 ## Names of the developers or team members
+- Dagle, Jhude Dominic
+- Hernandez, Nhealeen Fae D.
 

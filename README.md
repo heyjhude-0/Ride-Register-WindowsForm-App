@@ -1,4 +1,7 @@
-# Ride&Register 
+## 🎯 Project Title
+
+**Ride & Register** - A Windows Forms Desktop Application for TODA Management
+
 ---
 ## Project Description and Purpose
 
@@ -9,16 +12,48 @@ Ride&Register is a C# Windows Form Application  designed to manage Tricycle Oper
 
 ![image_alt](https://github.com/heyjhude-0/Ride-Register-WindowsForm-App/blob/43ea36c654b5071c9469ae08d0b9d924e8bf4948/Ride%26Register-UML.drawio.png)
 
-## Features and Functionalities of the System
+## ✨ Features and Functionalities
 
-List the main features of your system.
-| **Feature** | **Description** |
-| ----------- | ----------- |
-| Login Functionality | Securing access through a login authentication, ensuring only the admin can access TODA information, protecting member data. |
-| Dashboard Overview | An overview of the TODA system including total number of members, registered tricycles, and memberships supervision. |
-| Member Management | Register new members, update member information, track membership status |
-| Tricycle Management | Add tricycle information, link tricycle to available specific members |
-| Route Management | Define route start point and end point, link route to tricycle |
+### 1. **User Authentication & Authorization**
+- ✅ Secure login system with username and password
+- ✅ Role-based access control (Admin / Member)
+- ✅ Session management using SessionManager
+- ✅ Automatic dashboard routing based on user role
+
+### 2. **Member Management**
+- ✅ Add new members (Owners, Drivers, Operators)
+- ✅ View all members with detailed information
+- ✅ Update member information (Name, Contact, Address)
+- ✅ Delete member records
+- ✅ Membership renewal functionality
+- ✅ Track membership status (Active/Expired)
+- ✅ Account status tracking (Has Account/No Account)
+
+### 3. **Tricycle Management**
+- ✅ Add tricycles with plate number and model
+- ✅ Assign tricycles to owners, drivers, and routes
+- ✅ View all tricycles with owner and driver information
+- ✅ Update tricycle details
+- ✅ Delete tricycle records
+- ✅ **Search by plate number** - Real-time search functionality
+- ✅ **Filter by owner** - Filter tricycles by vehicle owner
+- ✅ **Filter by driver** - Filter tricycles by assigned driver
+- ✅ **Filter by route** - Filter tricycles by assigned route
+- ✅ Combined filtering - Multiple filters work simultaneously
+
+### 4. **Route Management**
+- ✅ Create new routes with start/end points and fare
+- ✅ View all routes with tricycle count
+- ✅ Update route information
+- ✅ Delete routes
+- ✅ Track tricycle assignments per route
+
+### 5. **Dashboard & Reporting**
+- ✅ Admin dashboard with key metrics
+- ✅ Total members count
+- ✅ Total tricycles count
+- ✅ Total routes count
+- ✅ Quick navigation to all modules
 
 ---
 ## Explanation of how the program works
@@ -38,7 +73,7 @@ The Dashboard offers a snapshot of the TODA system which includes:
 
   This module lets the admin:
    - Recruit new TODA members
-   - Update member details (Name, Age, Gender, Birthdate, Role)
+   - Update member details (Name, Birthdate, Address, Role)
    - Keep track on membership status (active/expired)
    - Search and filter member records using the DataGridView
 
@@ -73,7 +108,7 @@ The Dashboard offers a snapshot of the TODA system which includes:
   - Memberships
   - Tricycles
   - Routes
-  - Admin/Login table
+  - Users
 
 **Step 2 – Open the Project**
 - Create a new project.
@@ -96,6 +131,33 @@ You can now test:
 - Viewing records in DataGridViews with search and filter
 
 ---
+
+
+## 🛠️ Technology Stack
+
+### **Frontend**
+- **Windows Forms (WinForms)** - Desktop UI framework
+- **Guna.UI2** (v2.0.4.7) - Modern UI control library for enhanced UI/UX
+- **C# 7.3+** - Programming language
+
+### **Backend**
+- **C#** - Business logic implementation
+- **.NET Framework 4.7.2** - Runtime environment
+
+### **Database**
+- **SQL Server** (Express 2019 or later) - Relational database
+- **SQL Server Management Studio (SSMS)** - Database management tool
+
+### **Development Tools**
+- **Visual Studio Community 2022** - IDE
+- **Git** - Version control
+- **NuGet** - Package manager
+
+### **Libraries & Dependencies**
+- **Guna.UI2.WinForms** - Modern UI controls
+- **System.Data.SqlClient** - SQL Server connectivity
+- **System.Windows.Forms** - WinForms framework
+- 
 ## Names of the developers or team members
 - Dagle, Jhude Dominic
 - Hernandez, Nhealeen Fae

@@ -9,7 +9,7 @@ Ride&Register is a C# Windows Form Application  designed to manage Tricycle Oper
 
 ## UML Diagram
 
-![UML Diagram](UML.drawio.png)
+
 
 ---
 

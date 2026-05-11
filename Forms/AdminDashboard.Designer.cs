@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.pnlSideBar = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.SideMenuLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
@@ -61,6 +62,7 @@
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Controls.Add(this.btnSignOut);
             this.guna2GradientPanel1.Controls.Add(this.SideMenuLogo);
             this.guna2GradientPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2GradientPanel1.Controls.Add(this.btnDashboard);
@@ -76,6 +78,36 @@
             this.guna2GradientPanel1.Size = new System.Drawing.Size(220, 936);
             this.guna2GradientPanel1.TabIndex = 0;
             this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnSignOut.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnSignOut.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(72)))), ((int)(((byte)(255)))));
+            this.btnSignOut.CheckedState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSignOut.CheckedState.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSignOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignOut.FillColor = System.Drawing.Color.Transparent;
+            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSignOut.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(74)))), ((int)(((byte)(241)))));
+            this.btnSignOut.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
+            this.btnSignOut.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSignOut.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnSignOut.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnSignOut.Location = new System.Drawing.Point(0, 782);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(223, 66);
+            this.btnSignOut.TabIndex = 12;
+            this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnSignOut.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // SideMenuLogo
             // 
@@ -121,7 +153,7 @@
             this.btnDashboard.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(74)))), ((int)(((byte)(241)))));
             this.btnDashboard.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnDashboard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
             this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.ImageOffset = new System.Drawing.Point(10, 0);
@@ -151,7 +183,7 @@
             this.btnTricycles.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(74)))), ((int)(((byte)(241)))));
             this.btnTricycles.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTricycles.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnTricycles.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnTricycles.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btnTricycles.Image = ((System.Drawing.Image)(resources.GetObject("btnTricycles.Image")));
             this.btnTricycles.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTricycles.ImageOffset = new System.Drawing.Point(10, 0);
@@ -181,7 +213,7 @@
             this.btnRoutes.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(74)))), ((int)(((byte)(241)))));
             this.btnRoutes.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRoutes.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnRoutes.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.btnRoutes.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btnRoutes.Image = ((System.Drawing.Image)(resources.GetObject("btnRoutes.Image")));
             this.btnRoutes.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRoutes.ImageOffset = new System.Drawing.Point(10, 0);
@@ -211,7 +243,7 @@
             this.btnMembers.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(74)))), ((int)(((byte)(241)))));
             this.btnMembers.HoverState.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMembers.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnMembers.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.btnMembers.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btnMembers.Image = ((System.Drawing.Image)(resources.GetObject("btnMembers.Image")));
             this.btnMembers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnMembers.ImageOffset = new System.Drawing.Point(10, 0);
@@ -308,5 +340,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblGreeting1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblToda;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2Button btnSignOut;
     }
 }

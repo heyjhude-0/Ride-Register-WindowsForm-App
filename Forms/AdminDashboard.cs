@@ -140,6 +140,7 @@ namespace Ride_Register.Forms
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             OpenChildForm(adminDashboard);
+            adminDashboard.RefreshDashboard();
         }
 
         private void btnTricycles_Click(object sender, EventArgs e)
@@ -159,6 +160,21 @@ namespace Ride_Register.Forms
         private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result =
+            MessageBox.Show(
+            "Are you sure you want to sign out?",
+            "Sign Out",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

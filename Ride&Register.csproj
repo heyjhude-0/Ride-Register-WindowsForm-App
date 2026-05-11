@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DatabaseConnection.cs" />
+    <Compile Include="Data\SessionManager.cs" />
     <Compile Include="Forms\AccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +89,12 @@
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\RenewalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RenewalForm.Designer.cs">
+      <DependentUpon>RenewalForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RouteForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,11 +107,11 @@
     <Compile Include="Forms\TricycleForm.Designer.cs">
       <DependentUpon>TricycleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserTestForm.cs">
+    <Compile Include="Forms\UserDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UserTestForm.Designer.cs">
-      <DependentUpon>UserTestForm.cs</DependentUpon>
+    <Compile Include="Forms\UserDashboardForm.Designer.cs">
+      <DependentUpon>UserDashboardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
@@ -119,7 +126,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RideRegister_DBDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Services\AdminDashboardService.cs" />
     <Compile Include="Services\MembersService.cs" />
+    <Compile Include="Services\RouteService.cs" />
+    <Compile Include="Services\TricycleService.cs" />
+    <Compile Include="Services\UserDashboardService.cs" />
     <EmbeddedResource Include="Forms\AccountForm.resx">
       <DependentUpon>AccountForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,11 +146,17 @@
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RenewalForm.resx">
+      <DependentUpon>RenewalForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RouteForm.resx">
       <DependentUpon>RouteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TricycleForm.resx">
       <DependentUpon>TricycleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserDashboardForm.resx">
+      <DependentUpon>UserDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

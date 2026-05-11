@@ -68,10 +68,10 @@ namespace Ride_Register
             //    }
             //}
 
-                AdminDashboard ad = new AdminDashboard();
-                ad.Show();
-                this.Hide();
-            
+            AdminDashboard ad = new AdminDashboard();
+            ad.Show();
+            this.Hide();
+
         }
 
         private void textBox1_Click(object sender, EventArgs e)
@@ -132,33 +132,70 @@ namespace Ride_Register
                 {
                     conn.Open();
 
-                    string query = @"Select Role FROM Users 
-                                    WHERE Username = @userName AND Password = @password";
+                    string query =
+                            @"SELECT UserID, Role
+                              FROM Users
+                              WHERE Username = @username
+                              AND Password = @password";
 
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@username", username);
-                    cmd.Parameters.AddWithValue("@password", password);
+                    SqlCommand cmd =
+                        new SqlCommand(query, conn);
 
-                    object result = cmd.ExecuteScalar();
+                    cmd.Parameters.AddWithValue(
+                        "@username", username);
 
-                    if (result != null)
+                    cmd.Parameters.AddWithValue(
+                        "@password", password);
+
+                    SqlDataReader reader =
+                        cmd.ExecuteReader();
+
+                    if (reader.Read())
                     {
-                        string role = result.ToString();
+                        int userID =
+                            Convert.ToInt32(
+                                reader["UserID"]);
+
+                        string role =
+                            reader["Role"].ToString();
+
+                        SessionManager.CurrentUserID = userID;
+                        SessionManager.CurrentUsername = username;
+                        SessionManager.CurrentRole = role;
+
+                        Form dashboard = null;
 
                         if (role == "Admin")
                         {
-                            new AdminDashboard().Show();
+                            dashboard =
+                                new AdminDashboard();
                         }
                         else if (role == "Member")
                         {
-                            new UserTestForm().Show();
+                            dashboard =
+                                new UserDashboardForm(userID);
                         }
 
-                        this.Hide();
+                        if (dashboard != null)
+                        {
+                            this.Hide();
+
+                            dashboard.FormClosed +=
+                                (s, args) =>
+                                {
+                                    userBox.Clear();
+                                    passBox.Clear();
+
+                                    this.Show();
+                                };
+
+                            dashboard.Show();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Invalid username or password");
+                        MessageBox.Show(
+                            "Invalid username or password");
                     }
                 }
             }

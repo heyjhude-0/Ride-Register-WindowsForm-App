@@ -114,7 +114,7 @@
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(210, 58);
             this.btnLogin.TabIndex = 11;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Sign in";
             this.btnLogin.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
             // panel4

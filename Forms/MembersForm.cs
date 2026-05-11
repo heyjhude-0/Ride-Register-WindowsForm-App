@@ -32,8 +32,11 @@ namespace Ride_Register.Forms
             this.membersTableAdapter.Fill(this.rideRegister_DBDataSet1.Members);
             // TODO: This line of code loads data into the 'rideRegister_DBDataSet.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.rideRegister_DBDataSet.Users);
+
             LoadMembers();
             InitializeFilterComboBox();
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
 
         }
 
@@ -69,18 +72,6 @@ namespace Ride_Register.Forms
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string firstName = txtFname.Text;
-            string lastName = txtLname.Text;
-            DateTime bdate = dTBirthday.Value;
-            string phoneNo = txtPNumber.Text;
-            string address = txtAddress.Text;
-
-            
-            //string role = cmbRole.SelectedItem.ToString();
-            DateTime startDate = dateStartDate.Value;
-            DateTime endDate = dateEndDate.Value;
-
-
 
             if ((string.IsNullOrWhiteSpace(txtFname.Text)) || (string.IsNullOrWhiteSpace(txtLname.Text)) ||
                 (!dTBirthday.Checked) || (string.IsNullOrWhiteSpace(txtAddress.Text)))
@@ -95,57 +86,30 @@ namespace Ride_Register.Forms
                 return;
             }
 
- 
 
             try
             {
-                DatabaseConnection db = new DatabaseConnection();
+                MembersService service = new MembersService();
+                int memberID = service.AddMembers(txtFname.Text, txtLname.Text, dTBirthday.Value, txtPNumber.Text, txtAddress.Text, cmbRole.Text, dateStartDate.Value,dateEndDate.Value);
+                LoadMembers();
 
-                using (SqlConnection conn = db.GetConnection())
+
+                DialogResult result = MessageBox.Show("Member saved successfully! \n\nDo you want to create an account for this member?", "Create Account", MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
                 {
-                    conn.Open();
-
-                    string membershipQuery = @"Insert Into Memberships (Role, StartDate, ExpiryDate)
-                                     OUTPUT INSERTED.MembershipID
-                                     VALUES (@role, @startDate, @endDate)";
-
-                    SqlCommand cmd1 = new SqlCommand(membershipQuery, conn);
-                    cmd1.Parameters.AddWithValue("@role", cmbRole.SelectedItem.ToString());
-                    cmd1.Parameters.AddWithValue("@startDate", dateStartDate.Value);
-                    cmd1.Parameters.AddWithValue("@endDate", dateEndDate.Value);
-
-                    int membershipID = (int)cmd1.ExecuteScalar();
-
-                    string memberQuery = @"Insert Into Members (FirstName, LastName, DateOfBirth, PhoneNumber, Address, MembershipID)
-                                           OUTPUT INSERTED.MemberID
-                                           VALUES (@firstName, @lastName, @bdate, @phoneNo, @address, @membershipID)";
-
-                    SqlCommand cmd2 = new SqlCommand(memberQuery, conn);
-                    cmd2.Parameters.AddWithValue("@firstName", txtFname.Text);
-                    cmd2.Parameters.AddWithValue("@lastName", txtLname.Text);
-                    cmd2.Parameters.AddWithValue("@bdate", dTBirthday.Value);
-                    cmd2.Parameters.AddWithValue("@phoneNo", txtPNumber.Text);
-                    cmd2.Parameters.AddWithValue("@address", txtAddress.Text);
-                    cmd2.Parameters.AddWithValue("@membershipID", membershipID);
-
-                    int memberID = (int)cmd2.ExecuteScalar();
+                    AccountForm acc = new AccountForm(memberID, txtFname.Text, txtLname.Text);
+                    acc.ShowDialog();
                     LoadMembers();
-
-
-                    DialogResult result = MessageBox.Show("Member saved successfully! \n\nDo you want to create an account for this member?", "Create Account", MessageBoxButtons.YesNo);
-
-                    if (result == DialogResult.Yes)
-                    {
-                        AccountForm acc = new AccountForm(memberID, txtFname.Text, txtLname.Text);
-                        acc.ShowDialog();
-                        LoadMembers();
-                    }
-
                 }
 
-
+                ClearFields();
 
             }
+
+
+
+            
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -172,6 +136,8 @@ namespace Ride_Register.Forms
             dgvMembers.DataSource = null;
             dgvMembers.DataSource = _allMembers;
             dgvMembers.Columns["MembershipID"].Visible = false;
+            dgvMembers.Columns["StartDate"].Visible = false;
+
 
             // Make sure AccountStatus column is visible
             if (dgvMembers.Columns.Contains("AccountStatus"))
@@ -221,7 +187,6 @@ namespace Ride_Register.Forms
 
             string filterExpression = string.Empty;
 
-            // Build base filter from search
             if (!string.IsNullOrWhiteSpace(filterText) && filterColumn != "All")
             {
                 try
@@ -341,13 +306,19 @@ namespace Ride_Register.Forms
                 txtPNumber.Text = row.Cells["PhoneNumber"].Value.ToString();
                 txtAddress.Text = row.Cells["Address"].Value.ToString();
                 cmbRole.Text = row.Cells["Role"].Value.ToString();
+                dateStartDate.Value = Convert.ToDateTime(row.Cells["StartDate"].Value);
+                dateEndDate.Value = Convert.ToDateTime(row.Cells["ExpiryDate"].Value);
 
                 // Enable/disable Create Account button based on account status
                 string accountStatus = row.Cells["AccountStatus"].Value.ToString();
                 btnCreateAccount.Enabled = (accountStatus == "No Account");
 
                 btnSave.Enabled = false;
-                btnSave.Text = "Edit Mode";
+                btnRenew.Enabled = true;
+                btnUpdate.Enabled = true;
+                btnDelete.Enabled = true;
+                dateStartDate.Enabled = false;
+                dateEndDate.Enabled = false;
             }
 
 
@@ -389,11 +360,8 @@ namespace Ride_Register.Forms
   
         private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (cmbRole.SelectedIndex == -1)
-            //{
-            //    MessageBox.Show("Please select a member role.");
-            //}
-            
+          
+
         }
 
         private void tableLayoutPanel10_Paint(object sender, PaintEventArgs e)
@@ -602,9 +570,17 @@ namespace Ride_Register.Forms
             txtLname.Clear();
             txtPNumber.Clear();
             txtAddress.Clear();
+            cmbRole.SelectedIndex = -1;
+            dateStartDate.Value = DateTime.Today;
+            dateEndDate.Value = DateTime.Today;
 
             selectedMemberID = -1;
             btnCreateAccount.Enabled = false;
+            dateStartDate.Enabled = true;
+            dateEndDate.Enabled = true;
+            btnRenew.Enabled = false;
+            btnSave.Enabled = true;
+            btnUpdate.Enabled = false;
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
@@ -665,7 +641,7 @@ namespace Ride_Register.Forms
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
-            ResetForm();
+            ClearFields();
             
         }
 
@@ -728,10 +704,28 @@ namespace Ride_Register.Forms
                     return;
                 }
 
-                
+
+            }
+        }
+
+        private void btnRenew_Click(object sender, EventArgs e)
+        {
+            if (selectedMembershipID == -1)
+            {
+                MessageBox.Show("Select a member to renew their membership.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
 
+            DateTime currentExpiryDate = dateEndDate.Value;
 
+            RenewalForm renewalForm = new RenewalForm(selectedMembershipID, currentExpiryDate);
+            DialogResult result = renewalForm.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                LoadMembers();
+                ClearFields();
+            }
         }
 
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)

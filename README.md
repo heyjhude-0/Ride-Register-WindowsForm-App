@@ -7,6 +7,8 @@ The proposed project will be beneficial to real life TODA of tricycle drivers. T
 
 ## UML Diagram
 
+![alt text](image.jpg)
+
 ## Features and Functionalities of the System
 
 List the main features of your system.
@@ -20,11 +22,47 @@ List the main features of your system.
 
 ## Explanation of how the program works
 
+Ride&Register is a C# Windows Forms application for a Tricycle Operators and Drivers' Association (TODA) that manages the operation of a TODA. Member profiling, registration of tricycles and route assignment are all consolidated on a single organized desktop application for the TODA administrator.
 
+System login is secured with a Login Form as the starting point to the application. Only the admin can login with valid logins in the database. Once logged in, user is forwarded to the Main Dashboard.
+
+The Dashboard offers a snapshot of the TODA system which includes:
+
+The total count of members that have registered.The total number of registered members.
+Total registered tricycles
+Membership monitoring
+
+The admin can click on any of the following tabs or buttons to get to the three main modules from the dashboard:
+
+1. Member Management
+
+This module lets the admin:
+- Recruit new TODA members
+- Update member details (Name, Age, Gender, Birthdate, Role)
+- Keep track on membership status (active/expired)
+- Search and filter member records using the DataGrid View
+
+All member information is in the database tables Members and Memberships.
+
+2. Tricycle Management
+
+The admin can use this module to:
+- Record the information about the tricycle (model, plate number).
+- Attach a tricycle to a particular member/driver
+- Display list of all Registered tricycles in a DataGrid View
+
+This will ensure each tricycle has an owner/driver assigned.
+
+3. Route Management
+
+With this module, the admin can:
+- Identify starting and end points for routes
+- Use tricycles for routes
+- View the assignment and availability of routes
+
+This assists the TODA to track what routes are given a tricycle and which ones are still being driven.
 
 ## Instructions on how to run the application
-
-
 
 ## Names of the developers or team members
 

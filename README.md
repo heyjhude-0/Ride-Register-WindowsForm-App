@@ -99,4 +99,5 @@ You can now test:
 ---
 ## Names of the developers or team members
 - Dagle, Jhude Dominic
-- Hernandez, Nhealeen Fae D.
+- Hernandez, Nhealeen Fae
+- Tarcelo, Mark Nino

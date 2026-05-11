@@ -1,6 +1,8 @@
 ## 🎯 Project Title
 
-**Ride & Register** - A Windows Forms Desktop Application for TODA Management
+**Ride&Register** - A Windows Forms Desktop Application for TODA Management
+<img width="1280" height="320" alt="Sustainabuild (1)" src="https://github.com/user-attachments/assets/f72fa69a-1d19-42e7-8a1c-9a6760c1d6f0" />
+
 
 ---
 ## Project Description and Purpose
@@ -10,7 +12,7 @@ Ride&Register is a C# Windows Form Application  designed to manage Tricycle Oper
 ---
 ## UML Diagram
 
-![image_alt](https://github.com/heyjhude-0/Ride-Register-WindowsForm-App/blob/43ea36c654b5071c9469ae08d0b9d924e8bf4948/Ride%26Register-UML.drawio.png)
+![image_alt](https://github.com/heyjhude-0/Ride-Register-WindowsForm-App/blob/![Uploading Ride&Register-LOGO (6).png…]()/Ride%26Register-UML.drawio.png)
 
 ## ✨ Features and Functionalities
 

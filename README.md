@@ -1,6 +1,5 @@
-## 🎯 Project Title
+## 🎯**Ride&Register** - A Windows Forms Desktop Application for TODA Management
 
-**Ride&Register** - A Windows Forms Desktop Application for TODA Management
 <img width="1280" height="320" alt="Sustainabuild (1)" src="https://github.com/user-attachments/assets/f72fa69a-1d19-42e7-8a1c-9a6760c1d6f0" />
 
 

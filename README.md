@@ -39,33 +39,33 @@ The Dashboard offers a snapshot of the TODA system which includes:
 
   The admin can click on any of the following tabs or buttons to get to the three main modules from the dashboard:
 
-  **1. Member Management**
+    **1. Member Management**
 
-  This module lets the admin:
-  - Recruit new TODA members
-  - Update member details (Name, Age, Gender, Birthdate, Role)
-  - Keep track on membership status (active/expired)
-  - Search and filter member records using the DataGrid View
+    This module lets the admin:
+    - Recruit new TODA members
+    - Update member details (Name, Age, Gender, Birthdate, Role)
+    - Keep track on membership status (active/expired)
+    - Search and filter member records using the DataGrid View
 
-  All member information is in the database tables Members and Memberships.
+    All member information is in the database tables Members and Memberships.
 
-  **2. Tricycle Management**
+    **2. Tricycle Management**
 
-  The admin can use this module to:
-  - Record the information about the tricycle (model, plate number).
-  - Attach a tricycle to a particular member/driver
-  - Display list of all Registered tricycles in a DataGrid View
+    The admin can use this module to:
+    - Record the information about the tricycle (model, plate number).
+    - Attach a tricycle to a particular member/driver
+    - Display list of all Registered tricycles in a DataGrid View
 
-  This will ensure each tricycle has an owner/driver assigned.
+    This will ensure each tricycle has an owner/driver assigned.
 
-  **3. Route Management**
+    **3. Route Management**
 
-  With this module, the admin can:
-  - Identify starting and end points for routes
-  - Use tricycles for routes
-  - View the assignment and availability of routes
+    With this module, the admin can:
+    - Identify starting and end points for routes
+    - Use tricycles for routes
+    - View the assignment and availability of routes
 
-  This assists the TODA to track what routes are given a tricycle and which ones are still being driven.
+    This assists the TODA to track what routes are given a tricycle and which ones are still being driven.
 
 ---
 
